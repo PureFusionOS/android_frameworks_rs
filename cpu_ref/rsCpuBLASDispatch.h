@@ -1,5 +1,10 @@
 #ifndef RS_COMPATIBILITY_LIB
+#ifdef USE_QSML
+#include "qblas_cblas.h"
+#include "qblas.h"
+#else
 #include "cblas.h"
+#endif
 #else
 #include <dlfcn.h>
 /*
